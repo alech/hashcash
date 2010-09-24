@@ -1,0 +1,49 @@
+== Description
+   A library for creating and verifying so-called »hash cash stamps«, i.e.
+   proof of work as defined on hashcash.org.
+
+== Prerequisites
+   This package requires Ruby 1.8 or later.
+
+== Installation instructions
+   rake test (optional)
+   rake install (non-gem) or rake install_gem (gem)
+
+== Synopsis
+   require 'hashcash'
+
+   # Create a new hash cash stamp
+   s = HashCash::Stamp.new(:resource => 'hashcash@alech.de')
+   puts s
+
+   # Verify a given stamp
+   s = HashCash::Stamp.new(:stamp => '1:20:060408:adam@cypherspace.org::1QTjaYd7niiQA/sc:ePa')
+   s.verify('adam@cypherspace.org)
+
+== Known bugs
+   Stamp creation is an order of magnitude slower than using the
+   standalone hash cash program. This might not be fixed as I
+   mainly use the library for verification.
+
+== Copyright
+   (c) 2010 Alexander Klink
+
+== License
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+== Warranty
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+
+== Author
+   Alexander Klink
+   hashcash@alech.de
+   http://www.alech.de
+   @alech on Twitter
