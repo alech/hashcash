@@ -32,7 +32,7 @@ module HashCash
 		# Optionally, the parameters :bits and :date can be passed to the
 		# method to change the number of bits the stamp is worth and the issuance
 		# date (which is checked on the server for an expiry with a default
-		# deviance of 2 days).
+		# deviance of 2 days, pass a Time object).
 		#
 		# Alternatively, a stamp can be passed to the constructor by passing
 		# it as a string to the :stamp parameter, e.g.
