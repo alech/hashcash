@@ -18,8 +18,3 @@ XEOF
 
     gem.files = Dir['lib/hashcash.rb'] + Dir['test/test_hashcash.rb'] 
 end
-
-if $0 == __FILE__
-    Gem.manage_gems
-    Gem::Builder.new(spec).build
-end
