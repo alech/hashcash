@@ -126,7 +126,7 @@ module HashCash
 			hour  = date[6,2].to_i
 			min   = date[8,2].to_i
 			sec   = date[10,2].to_i
-			Time.utc(year, month, day, hour, min, sec)
+			Time.utc(2000 + year, month, day, hour, min, sec)
 		end
 
 		# Convert a date to the string format used in the stamps
